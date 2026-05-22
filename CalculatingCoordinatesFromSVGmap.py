@@ -29,7 +29,7 @@ def get_county_attributes(svg_file_name):
 def get_boundary_coordinates(boundary_data):
     # find pairs of decimals separated by a comma
     matches = re.findall(r"([0-9.]+),([0-9.]+)", boundary_data)
-    # convert pairs to pairs of floats
+    # convert pairs of strings to pairs of floats
     coordinates = [(float(x), float(y)) for x, y in matches]
     return coordinates
 
