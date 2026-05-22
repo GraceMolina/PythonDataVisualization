@@ -20,7 +20,7 @@ def get_county_attributes(svg_file_name):
     path_id = [path.getAttribute('id') for path
                     in doc.getElementsByTagName('path')] # extract path string id
     path_d = [path.getAttribute('d') for path
-                    in doc.getElementsByTagName('path')] # extract path string id
+                    in doc.getElementsByTagName('path')] # extract path string d
     doc.unlink()
     attributes = [(id, d) for id, d in zip(path_id, path_d)] # form list of 2-tuples
     return attributes
